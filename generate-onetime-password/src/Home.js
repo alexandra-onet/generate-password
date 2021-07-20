@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router';
 import Generatepassword from './generatepass';
-// import DateTimePicker from 'react-datetime-picker';
-
+import Logobt from './BT-logo.png';
+import './HomeStyle.css';
 
 export default class Home extends Component {
     state = {
@@ -34,22 +34,26 @@ export default class Home extends Component {
             <div className='container-router'>
                 <React.Fragment>
                     <div className='homepage-container'>
-                        <div className='account-content'>
-                            <label htmlFor='userID'>UserID:</label>
-                            <input
-                                id='userID'
-                                type='userID'
-                                name='userID'
-                                placeholder='userID'
-                                onChange={this.handleChangeuserID}></input>
-                        </div>
-                        <div className='current-time'>
-                            <label htmlFor='currentTime'>Date:{this.state.curTime}</label>
-                        </div>
-                        <div className='generate-password-button'>
-                            <form ref="form" >
-                                <button onClick={this.onSubmitHandler}>Generate Password</button>
-                            </form>
+                        <img src={Logobt} id='logo-bt'></img>
+                        <div className='generate-pass'>Generate one-time password</div>
+                        <div className='account-userID'>
+                            <div className='account-content'>
+                                <label htmlFor='userID'>Insert your User ID</label>
+                                <input
+                                    id='userID'
+                                    type='userID'
+                                    name='userID'
+                                    onChange={this.handleChangeuserID}></input>
+                            </div>
+                            <div className='current-time'>
+                                <label htmlFor='currentTime'>Date and Time :</label>
+                                <p>{this.state.curTime}</p>
+                            </div>
+                            <div className='generate-password-button'>
+                                <form ref="form" >
+                                    <button onClick={this.onSubmitHandler}>Generate Password</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </React.Fragment>
