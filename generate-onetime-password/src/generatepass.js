@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import './GeneratepasswordStyle.css';
-import Home from './Home';
 
 export default class Generatepassword extends Component {
   constructor(props) {
@@ -39,21 +38,13 @@ export default class Generatepassword extends Component {
       }
     }, 1000)
   }
-  componentWillUnmount() {
-    clearInterval(this.myInterval)
-  }
-  componentDidUpdate() {
-    if (this.state.myInterval === 0) {
-      <Redirect to={'/Home'} />
-    }
-  }
   render() {
     const { minutes, seconds } = this.state;
     return (
       <div className="generator">
         <div className="generator-container">
           <h1 className="generator-pass">{this.state.password.data}</h1>
-          <div className="generator-strong">
+          <div className="generator-time">
             <div>
               {minutes === 0 && seconds === 0
                 ? <Redirect to={'/home'} />

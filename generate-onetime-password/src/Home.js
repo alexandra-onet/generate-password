@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
-import Generatepassword from './generatepass';
 import Logobt from './BT-logo.png';
 import './HomeStyle.css';
 
@@ -34,7 +32,7 @@ export default class Home extends Component {
             <div className='container-router'>
                 <React.Fragment>
                     <div className='homepage-container'>
-                        <img src={Logobt} id='logo-bt'></img>
+                        <img src={Logobt} id='logo-bt' alt="Logo"></img>
                         <div className='generate-pass'>Generate one-time password</div>
                         <div className='account-userID'>
                             <div className='account-content'>
@@ -50,9 +48,7 @@ export default class Home extends Component {
                                 <p>{this.state.curTime}</p>
                             </div>
                             <div className='generate-password-button'>
-                                <form ref="form" >
-                                    <button onClick={this.onSubmitHandler}>Generate Password</button>
-                                </form>
+                                <button onClick={this.onSubmitHandler}>Generate Password</button>
                             </div>
                         </div>
                     </div>
