@@ -30,7 +30,7 @@ class App extends Component {
           }} />
         <Router>
           <React.Fragment>
-              <Route exact path='/' component={Home}></Route>
+            <Route exact path='/' component={Home}></Route>
             <Switch>
               <Route exact path="/home" component={Home} />
               <Route exact path="/Generatepassword" component={Generatepassword} />

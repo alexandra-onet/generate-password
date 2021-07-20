@@ -1,8 +1,7 @@
 .container-router {
-    width: 100%;
-    height: 100%;
-    padding-top: 10%;
     position: absolute;
+    width: 100%;
+    padding-top: 10%;
 }
 .homepage-container {
     background: rgba(0, 0, 0, 0.8);    
@@ -66,3 +65,77 @@
     background-color: rgba(82, 82, 82, 0.3);
 }
 
+@media only screen and (max-width: 300px) {
+    .homepage-container {
+        width: 80%;
+        padding: 5px;
+        font-size: 10px;
+    }
+    #userID {
+        width: 90%;    
+    }
+    .account-userID {
+        padding: 0px;
+    }  
+    .account-content {
+        font-size: 10px;
+    }
+    .generate-password-button button {
+        font-size: 8px;
+    }
+}
+@media only screen and (max-width: 600px) and (min-width: 301px) {
+    .homepage-container {
+        width: 80%;
+        padding: 10px;
+        font-size: 10px;
+    }
+    .account-userID {
+        padding: 5px;
+    }  
+    .account-content {
+        font-size: 10px;
+    }
+    .generate-password-button button {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 1000px) and (min-width: 601px) {
+    .homepage-container {
+        width: 60%;
+    }
+    .account-userID {
+        padding: 5px;
+    }  
+}
+@media only screen and (min-width: 1001px) {
+ 
+    .homepage-container {
+        width: 70%;
+        font-size: 20px;
+    } 
+    .account-content {
+        font-size: 20px;
+    }
+    .account-userID {
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .account-content label, .current-time, .account-content {
+        font-size: 20px;
+    }
+    #userID {
+        width: 100%;
+        height: 20px;
+        margin-top: 15px;
+    }
+    .current-time {
+        margin-top: 20px;
+    }
+    .generate-password-button button {
+        font-size: 20px;
+        padding: 10px;
+    }
+     
+}
